@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="off-canvas-wrap">
+      <div class="inner-wrap">
+        <nav class="tab-bar">
+          <section class='right-small'>
+            <a href="" class="right-off-canvas-toggle menu-icon"><span></span></a>
+          </section>
+
+        </nav>
+        <a class="right-off-canvas-toggle data-no-turbolink"></a>
+
+          <aside class="right-off-canvas-menu">
+            <ul class="right">
+              <li class="divider data-no-turbolink"></li>
+              <li><%= link_to "Home", sites_path %></li>
+              <li class="divider data-no-turbolink"></li>
+              <li><%= link_to "Sign Up",  signup_path%></li>
+              <li class="divider data-no-turbolink"></li>
+              <li><%= link_to "Sign In", signin_path %></li>
+              <li class="divider data-no-turbolink"></li>
+              <li><%= link_to "Sign Out" %></li>
+              <li class="divider data-no-turbolink"></li>
+              <li><%= link_to "Players List", players_path %></li>
+              <li class="divider data-no-turbolink"></li>
+              <li><%= link_to "Tournaments List", tournaments_path %></li>
+            </ul>    
+          </aside>
+    
+ <!-- End of Navbar  -->
+    <div class="row">
+      <div class="small-12 medium-12 large-12 small-centered columns"> <%= yield %> </div>
+      <div class="small-10 columns">
+      
+      </div>
+    </div>
+  
+        <a class="exit-off-canvas"></a>
+      </div>
+    </div>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

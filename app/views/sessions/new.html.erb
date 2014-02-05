@@ -1,0 +1,25 @@
+
+
+<div class="row">
+  <div class="small-10 small-centered medium-5 medium-centered large-3 large-centered columns">
+    <h1 class="sign_in">Sign in</h1>
+  </div>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+    <div class="small-12 small-centered medium-6 large-6 columns">
+      <%= f.label "Email"%>
+      <%= f.text_field :email, :placehoder => "Enter Email" %> <br>
+
+      <%= f.label "Password"%>      
+      <%= f.password_field :password, :placeholder => "Enter Password" %>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 small-centered medium-6 medium-centered large-6 large-centered columns">
+		<div class="actions">
+	      <%= f.submit "Sign in", :class => "small button radius" %>
+	    <% end %>
+		</div>
+	    <p id="orange">New user? <%= link_to "Sign up now!", signup_path %></p>
+  </div>
+</div>

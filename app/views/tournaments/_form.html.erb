@@ -1,0 +1,46 @@
+<!-- tournament -->
+
+<%= form_for(@tournament) do |f| %>
+  <% if @tournament.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tournament.errors.count, "error") %> prohibited this tournament from being saved:</h2>
+
+      <ul>
+      <% @tournament.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="row"> 
+  <div class="small-10 small-centered medium-6 large-6 columns">
+    <div class="tourny-field">
+      <%= f.label :name %> 
+      <%= f.text_field :name, :placeholder => "Name" %> <br>
+    </div>
+    <div class="tourny-field">
+      <%= f.label :course %> 
+      <%= f.text_field :course, :placeholder => "Course" %> <br>
+    </div>
+    <div class="tourny-field">
+      <%= f.label :player_count %> 
+      <%= f.text_field :player_count, :placeholder => "Amount of Players" %> <br>
+    </div>
+    <div class="tourny-field">
+      <%= f.label :number_rounds %> 
+      <%= f.text_field :number_rounds, :placeholder => "Number of Rounds" %> <br>
+    </div> 
+    <div class="tourny-field">
+      <%= f.label :date %> 
+      <%= f.text_field :date, :placeholder => "Date" %> <br>
+    </div>
+  <div class="row">
+    <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">  
+      <div class="tourny-actions">
+        <%= f.submit "Create", :class => "small button radius" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  </div>
+</div>

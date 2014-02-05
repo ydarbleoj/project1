@@ -1,0 +1,28 @@
+<div class="row player-profile">
+	<div class="small-10 small-centered medium-6 large-6 columns">
+		<p id="notice"><%= notice %></p>
+
+		<p>
+		  <strong>Name:</strong>
+		  <%= @player.name %>
+		</p>
+
+		<p>
+		  <strong>Handicap:</strong>
+		  <%= @player.handicap %>
+		</p>
+
+		<p>
+		  <strong>Residence:</strong>
+		  <%= @player.city %>
+		</p>
+		
+		 <p>
+		 	<%#= render 'follow_form' if signed_in? %>
+		 </p>
+	</div>
+	<%= link_to 'Edit', edit_player_path(@player) %> |
+	<%#= link_to 'Destroy', player.id, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= link_to 'Back', players_path %>
+</div>
+

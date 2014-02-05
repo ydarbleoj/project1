@@ -1,0 +1,31 @@
+<div class="row tournament-display">
+  <div class="small-10 small-centered medium-6 large-6 columns">
+    <p class="notice"><%= notice %></p>
+    <h1>Tournament List</h1>
+    <table>
+    <thead>
+      <tr>
+        here
+        <th>Name</th>
+        <th>Course</th>
+        <th>Player Count</th>
+        <th>Rounds</th>
+        <th>Date</th>
+        <th>Creator</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tournaments.each do |tournament| %>
+      <tr>
+        <td><%= tournament.name %></td>
+        <td><%= tournament.course %></td>
+        <td><%= tournament.player_count %></td>
+        <td><%= tournament.number_rounds %></td>
+        <td><%= tournament.date %></td>
+        <td><%= tournament.creator %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+</div>

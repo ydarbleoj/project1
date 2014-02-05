@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require foundation_and_overrides
+
+ *= require_tree .
+ */
+ 
+ * {
+ 	list-style-type: none;
+ }
+
+body,html{
+    height:100%;
+    width:100%;
+
+}
+
+h1.sign_in {
+	color: rgba(52, 152, 219, 1.0);
+	text-align: center;
+}
+
+h1.new_player {
+	text-align: center;
+	color: rgba(52, 152, 219, 1.0);
+}
+
+div.actions .button {
+	width: 100%;
+	background-color: transparent;
+	border: 2px solid rgba(52, 152, 219, 1.0);
+}
+
+div.actions .button:hover {
+	color: #333;
+	background-color: rgba(52, 152, 219, 1.0);
+}
+
+.off-canvas-wrap,.inner-wrap {
+    height: auto;   
+}
+
+aside ul, li {
+	margin-top: 2em;
+	margin-right: 2.5em;
+	line-height: 2;
+	color: rgba(52, 152, 219, 1.0);
+}
+
+.field {
+	color: rgba(211, 84, 0,1.0);
+}
+
+p#orange {
+	color:  #d35400;
+}
+
+
+/* Player Profile */
+
+div.player-profile {
+	height: 50em;
+	color: rgba(52, 152, 219, 1.0);
+}
+
+/* Home Page */
+
+
+
+/*div.home-page {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	min-height: 45em;
+	background: url("/assets/bandonBW.jpg") center center no-repeat;
+	background-size: cover;
+}
+*/
+
+
+
+/* Tournament Add Sheet */
+
+h1.new_tournament{
+	text-align: center;
+	color: #d35400;
+}
+
+
+div.tourny-actions .button {
+	width: 100%;
+	background-color: transparent;
+	border: 2px solid #d35400;
+}
+
+div.tourny-actions .button:hover {
+	color: #333;
+	background-color: #d35400;
+}
+
+/*div.tourny-field {
+	color: rgba(52, 152, 219, 1.0);
+}
+*/
+
+
+
+

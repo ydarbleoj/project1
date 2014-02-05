@@ -1,0 +1,54 @@
+<%= form_for(@player) do |f| %>
+  <% if @player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% @player.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="row"> 
+  <div class="small-10 small-centered medium-6 large-6 columns">
+    <div class="field">
+      <%= f.label :name %> 
+      <%= f.text_field :name, :placeholder => "Name" %> <br>
+    </div>
+    <div class="field">
+      <%= f.label :email %> 
+      <%= f.text_field :email, :placeholder => "Email" %> <br>
+    </div>
+    <div class="field">
+      <%= f.label :password %> 
+      <%= f.text_field :password, :placeholder => "Password" %> <br>
+    </div> 
+    <div class="field">
+      <%= f.label :password_confirmation %> 
+      <%= f.text_field :password_confirmation, :placeholder => "Password Confirmation" %> <br>
+    </div>
+    
+    <div class="field">
+      <%= f.label :handicap %> 
+      <%= f.text_field :handicap, :placeholder => "Handicap" %> <br>
+    </div>
+    
+    <div class="field">
+      <%= f.label :city %> 
+      <%= f.text_field :city, :placeholder => "City" %> <br>
+    </div>
+    <div class="field">
+      <%= f.label :state %> 
+      <%= f.text_field :state, :placeholder => "State" %> <br>
+    </div>
+  <div class="row">
+    <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">  
+      <div class="actions">
+        <%= f.submit "Create", :class => "small button radius" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  </div>
+</div>

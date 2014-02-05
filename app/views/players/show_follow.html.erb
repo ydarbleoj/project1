@@ -1,0 +1,26 @@
+<div class="row">
+  <aside class="small-12 small-centered columns">
+    <section>
+      <%#= gravatar_for @player %>
+      <h1><%= @player.name %></h1>
+      <span><%= link_to "view my profile", @player %></span>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+      <% if @players.any? %>
+        <div class="user_avatars">
+          <% @players.each do |player| %>
+            <%= link_to gravatar_for(player, size: 30), player %>
+          <% end %>
+        </div>
+      <% end %>
+    </section>
+  </aside>
+  <div class="small-12 small-centered columns">
+    <% if @players.any? %>
+      <ul class="players">
+        <%= render @players %>
+      </ul>
+    <% end %>
+  </div>
+</div>

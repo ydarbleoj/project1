@@ -2,14 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.home-page {
+html, body {
 	display: block;
 	position: absolute;
 	z-index: 1;
 	min-width: 100%;
 	min-height: 100%;
-	background: transparent url("/images/bandonBW.jpg") center center no-repeat;
+	background: url("/assets/pacificBW.jpg") center center no-repeat;
 	background-size: cover;
-	color: blue;
 }
 
+
+.home-page h1 {
+	color: white; //#d35400
+	font-size: 2.5em;
+}
+
+.home-page h1:hover {
+	color: #333;
+}
+
+// .home-page {
+// 	width: 100%;
+// 	height: 40em;
+// }

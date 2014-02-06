@@ -21,7 +21,6 @@
 body,html{
     height:100%;
     width:100%;
-
 }
 
 h1.sign_in {
@@ -29,7 +28,10 @@ h1.sign_in {
 	text-align: center;
 }
 
-h1.new_player {
+
+
+
+h1.new-player {
 	text-align: center;
 	color: rgba(52, 152, 219, 1.0);
 }
@@ -74,22 +76,38 @@ div.player-profile {
 
 /* Home Page */
 
-
-
-/*div.home-page {
-	display: block;
-	position: absolute;
-	z-index: 1;
+.home {
 	width: 100%;
-	min-height: 45em;
-	background: url("/assets/bandonBW.jpg") center center no-repeat;
-	background-size: cover;
+	height: 45em;
 }
-*/
+.home-page-up .button {
+	width: 100%;
+	margin-top: 18em;
+	background-color: transparent;
+	border: 2px solid rgba(52, 152, 219, 1.0);
+} 
+
+.home-page-up .button:hover {
+	color: #333;
+	background-color: rgba(52, 152, 219, 1.0);
+}
+
+.home-page-in .button {
+	width: 100%;
+	background-color: transparent;
+	border: 2px solid rgba(211, 84, 0, 1.0);
+}
+
+.home-page-in .button:hover {
+	color: #333;
+	background-color: rgba(211, 84, 0, 1);
+}
 
 
 
 /* Tournament Add Sheet */
+
+
 
 h1.new_tournament{
 	text-align: center;
@@ -112,6 +130,24 @@ div.tourny-actions .button:hover {
 	color: rgba(52, 152, 219, 1.0);
 }
 */
+
+@media only screen  and (max-width: 40em) {
+	.field {
+		margin-top: -1em;
+	} 
+} 
+
+@media only screen and (max-width: 50em) {
+	.field {
+		margin-top: -1em;
+	}
+}
+
+
+
+
+
+
 
 
 

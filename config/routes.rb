@@ -3,7 +3,7 @@ VsGolf::Application.routes.draw do
  
   resources :tournaments
   resources :sessions, only: [:new, :create, :destroy]
-  
+  resources :scores
   resources :players 
     
 
@@ -23,9 +23,7 @@ VsGolf::Application.routes.draw do
   root to: "sites#index"
 end
 
-
-#  Prefix Verb   URI Pattern                     Controller#Action
-#     tournaments GET    /tournaments(.:format)          tournaments#index
+#  tournaments GET    /tournaments(.:format)          tournaments#index
 #                 POST   /tournaments(.:format)          tournaments#create
 #  new_tournament GET    /tournaments/new(.:format)      tournaments#new
 # edit_tournament GET    /tournaments/:id/edit(.:format) tournaments#edit
@@ -36,6 +34,14 @@ end
 #        sessions POST   /sessions(.:format)             sessions#create
 #     new_session GET    /sessions/new(.:format)         sessions#new
 #         session DELETE /sessions/:id(.:format)         sessions#destroy
+#          scores GET    /scores(.:format)               scores#index
+#                 POST   /scores(.:format)               scores#create
+#       new_score GET    /scores/new(.:format)           scores#new
+#      edit_score GET    /scores/:id/edit(.:format)      scores#edit
+#           score GET    /scores/:id(.:format)           scores#show
+#                 PATCH  /scores/:id(.:format)           scores#update
+#                 PUT    /scores/:id(.:format)           scores#update
+#                 DELETE /scores/:id(.:format)           scores#destroy
 #         players GET    /players(.:format)              players#index
 #                 POST   /players(.:format)              players#create
 #      new_player GET    /players/new(.:format)          players#new
@@ -56,3 +62,5 @@ end
 #         signout DELETE /signout(.:format)              sessions#destroy
 #          signin GET    /signin(.:format)               sessions#new
 #            root GET    /                               sites#index
+
+

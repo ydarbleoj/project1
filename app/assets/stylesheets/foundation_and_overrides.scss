@@ -34,7 +34,7 @@
 // $include-html-grid-classes: $include-html-classes;
 
 // $row-width: rem-calc(1000);
-$column-gutter: rem-calc(100);
+// $column-gutter: rem-calc(100);
 // $total-columns: 12;
 
 // We use these to control various global styles
@@ -374,13 +374,13 @@ $body-bg: #333;
 // $form-label-pointer: pointer;
 $form-label-font-size: rem-calc(20);
 $form-label-font-weight: light;
-$form-label-font-color: scale-color(#999, $lightness: 30%);
-// $form-label-bottom-margin: rem-calc(8);
+$form-label-font-color: scale-color(#999, $lightness: 40%);
+// $form-label-bottom-margin: rem-calc(3);
 // $input-font-family: inherit;
-$input-font-color: #d35400;
+$input-font-color: rgba(52, 152, 219, .5);
 $input-font-size: rem-calc(15);
-// $input-bg-color: #fff;
-// $input-focus-bg-color: scale-color(#fff, $lightness: -2%);
+$input-bg-color: rgba(255, 255, 255, .4);
+$input-focus-bg-color: scale-color(#333, $lightness: -10%);
 // $input-border-color: scale-color(#fff, $lightness: -20%);
 // $input-focus-border-color: scale-color(#fff, $lightness: -40%);
 // $input-border-style: solid;
@@ -525,18 +525,19 @@ $input-font-size: rem-calc(15);
 
 // Off-canvas
 
-$tabbar-bg: #333;
+$tabbar-bg: rgba(255, 255, 255, 0);
 $tabbar-height: rem-calc(60);
 // $tabbar-line-height: $tabbar-height;
-// $tabbar-color: #fff;
+// $tabbar-color: rgba(255, 0, 0, 0.2);
 // $tabbar-middle-padding: 0 rem-calc(10);
 
 // Off Canvas Divider Styles
-$tabbar-right-section-border: solid 1px scale-color($tabbar-bg, $lightness: 1%);
+// $tabbar-right-section-border: solid 1px scale-color($tabbar-bg, $lightness: 1%);
 // $tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
 
+
 // Off Canvas Tab Bar Headers
-// $tabbar-header-color: #FFF;
+// $tabbar-header-color: white;
 // $tabbar-header-weight: bold;
 // $tabbar-header-line-height: $tabbar-height;
 // $tabbar-header-margin: 0;
@@ -559,7 +560,7 @@ $off-canvas-width: 180px;
 // $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
 // $off-canvas-label-link
 // Off Canvas Menu Icon Variables
-// $tabbar-menu-icon-color: #FFF;
+// $tabbar-menu-icon-color: rgba(255, 255, 255, 0.2);
 // $tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
 
 // $tabbar-menu-icon-text-indent: rem-calc(35);

@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+tournaments []
+tournaments << Tournament.create(name: "Bandon Trip", player_count: "16", 
+                                number_rounds: "3", course: "Lodge at Bandon" )
+
+                                

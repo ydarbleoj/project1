@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg', "~> 0.17.1"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -26,6 +26,8 @@ gem 'jquery-rails'
 gem 'annotate'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+
+
 
 group :development do
   gem 'quiet_assets', '~> 1.0.2' 
@@ -52,3 +54,11 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'rails_12factor', group: :production
+
+ruby "2.0.0"
+
+
+
+

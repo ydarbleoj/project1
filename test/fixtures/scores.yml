@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: MyString
+  tournament_id: MyString
+  round_num: MyString
+  gross_score: MyString
+
+two:
+  player_id: MyString
+  tournament_id: MyString
+  round_num: MyString
+  gross_score: MyString

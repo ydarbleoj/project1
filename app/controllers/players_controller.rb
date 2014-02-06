@@ -8,6 +8,8 @@ class PlayersController < ApplicationController
 
   # GET /players/1
   def show
+    @player = Player.find(params[:id])
+    @tournaments = @player.tournaments
   end
 
   # GET /players/new

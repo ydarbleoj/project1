@@ -24,20 +24,10 @@ class TournamentsController < ApplicationController
     end 
   end
 
-  # def accept
-  #   @challenge = current_player.received_tournaments.find(params[:id])
-  #   render :game
-  # end
+  
 
-  # def deny
-  #   current_player.received_tournaments.destroy(params[:id])
-  #   redirect_to tournaments_url
-  # end
 
-  # def complete
-  #   # end of tourny 
-  #   # emails? end of game 
-  # end
+  
   private
 
   def tournament_params

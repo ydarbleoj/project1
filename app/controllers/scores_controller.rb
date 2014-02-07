@@ -17,7 +17,7 @@ class ScoresController < ApplicationController
   def show 
     id = params.require(:id)
     @score = Score.where(params[:id])
-    @players = @score.tournaments
+    # @players = @score.tournaments
   end
 
 

@@ -81,9 +81,34 @@ p#orange {
 
 /* Player Profile */
 
-div.player-profile {
-	height: 50em;
-	color: rgba(52, 152, 219, 1.0);
+.player {
+	background-color: #333;
+	opacity: .9;
+
+}
+
+.player-profile {
+	width: 100%;
+	margin-top: 10em;	
+	z-index: 1;
+}
+
+.player-profile h1 {
+	font-size: 3em;
+	color: rgba(52, 152, 219, .9);
+	text-align: left;
+}
+
+.player-profile-handicap h2 {
+	color: #d35400;
+}
+
+.player-profile-tournaments {
+	margin-left: 1em;
+}
+
+.edit-button {
+	margin-top: 10em;
 }
 
 /* Home Page */

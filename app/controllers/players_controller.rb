@@ -8,9 +8,12 @@ class PlayersController < ApplicationController
 
   # GET /players/1
   def show
-    @player = Player.find(params[:id])
-    @tournaments = @player.tournaments
+    id = params.require(:id)
+    @player = Player.find(id)
+    @tournament = @player.tournaments
   end
+
+
 
   # GET /players/new
   def new
@@ -52,29 +55,13 @@ class PlayersController < ApplicationController
     # 
     @player.destroy
     respond_to do |format|
-      edirect_to players_url 
+      redirect_to players_url 
     end
   end
 
   # sending challenges for tournament 
   # friend or follower 
-  def send_challenge(follower)
-    sent_challenges.create(receiver: follower)
-  end  
-
-
-  # def following
   
-  #   @player = Player.find(params[:id])
-  #   @players = @player.followed_users
-  #   render 'show_follow'
-  # end
-
-  # def followers
-  #   @player = Player.find(params[:id])
-  #   @players = @player.followers
-  #   render 'show_follow'
-  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

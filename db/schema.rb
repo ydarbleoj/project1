@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20140206002412) do
   end
 
   create_table "scores", force: true do |t|
-    t.string   "player_id"
-    t.string   "tournament_id"
+    t.integer  "player_id"
+    t.integer  "tournament_id"
     t.string   "round_num"
     t.string   "gross_score"
     t.datetime "created_at"

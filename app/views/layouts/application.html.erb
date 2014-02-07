@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Tourny" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,10 +12,12 @@
   </head>
 
   <body>
+    <div class="page">
     <div class="off-canvas-wrap">
       <div class="inner-wrap">
         <div class="fixed">
         <nav class="tab-bar">
+  
           <section class='right-small'>
             <a href="" class="right-off-canvas-toggle menu-icon"><span></span></a>
           </section>
@@ -33,11 +35,11 @@
               <li class="divider data-no-turbolink"></li>
               <li><%= link_to "Sign In", signin_path %></li>
               <li class="divider data-no-turbolink"></li>
-              <li><%= link_to "Sign Out" %></li>
+              <li><%= link_to "Sign Out", root_path %></li>
               <li class="divider data-no-turbolink"></li>
-              <li><%= link_to "Players List", players_path %></li>
+              <li><%= link_to "Players", players_path %></li>
               <li class="divider data-no-turbolink"></li>
-              <li><%= link_to "Tournaments List", tournaments_path %></li>
+              <li><%= link_to "Tournaments", tournaments_path %></li>
             </ul>    
           </aside>
     
@@ -51,6 +53,7 @@
   
         <a class="exit-off-canvas"></a>
       </div>
+    </div>
     </div>
     <%= javascript_include_tag "application" %>
   </body>

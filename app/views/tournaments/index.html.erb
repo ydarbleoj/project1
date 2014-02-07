@@ -11,18 +11,17 @@
         <th>Player Count</th>
         <th>Rounds</th>
         <th>Date</th>
-        <th>Creator</th>
       </tr>
     </thead>
     <tbody>
      
       <tr>
-        <td><%= tournament.name %></td>
+        <td><%= link_to tournament.name, tournament %></td>
         <td><%= tournament.course %></td>
         <td><%= tournament.player_count %></td>
         <td><%= tournament.number_rounds %></td>
         <td><%= tournament.date %></td>
-        <td><%= tournament.creator %></td>
+       
       </tr>
       <% end %>
     </tbody>

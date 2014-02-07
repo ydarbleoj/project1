@@ -1,0 +1,31 @@
+<%= form_for(@score) do |f| %>
+<%#= f.hidden_field :tournament_id, :value => @tournament.id %>
+<div class="row">
+	<div class="small-10 small-centered medium-6 large-6 columns">
+		<h1>Round 1</h1>
+		<div class="score-field">
+			<%= f.label 'Player' %> 
+			<%= f.text_field :name%>
+		</div>
+		<div class="score-field">
+			<%= f.label 'Score' %> 
+			<%= f.text_field :gross_score, :placeholder => ""%>
+		</div>
+		<div class="actions">
+	        <%= f.submit "Save", :class => "small button" %>
+	     </div>
+		<% end %>
+	</div>
+</div>
+
+		<!-- <p>
+		  <strong>Name:</strong>
+		  <%#= @score.where(player_id => player.id) %>
+		</p>
+
+		<p>
+		  <strong>Score:</strong>
+		  <%#= @score.gross_score %>
+		</p>
+	 -->
+

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-12 small-centered medium-6 medium-centered large-6 large-centered columns">
-    <h1>Listing players</h1>
+    <h1>Players List</h1>
 
     <table>
       <thead>
@@ -8,8 +8,8 @@
           <th>Name</th>
           <th>Handicap</th>
           <th>City</th>
-          <th></th>
-          <th></th>
+          <th>State</th>
+        
           
         </tr>
       </thead>
@@ -17,11 +17,10 @@
       <tbody>
         <% @players.each do |player| %>
           <tr>
-            <td><%= player.name %></td>
+            <td><%= link_to player.name, player %></td>
             <td><%= player.handicap %></td>
             <td><%= player.city %></td>
-            <td></td>           
-            <td><%= link_to 'Show', player %></td>
+            <td><%= player.state %></td>
           </tr>
         <% end %>
       </tbody>
@@ -29,7 +28,7 @@
 
     <br>
 
-    <%= link_to 'New Player', new_player_path, class: "button radius" %>
+    <%#= link_to 'New Player', new_player_path, class: "button radius" %>
     </div>
 </div>
 

@@ -23,6 +23,21 @@ body,html{
     width:100%;
 }
 
+html, body > .page, .off-canvas-wrap { 
+	height:100%; 
+} 
+
+.off-canvas-wrap { overflow-y: scroll; } 
+
+.inner-wrap { min-height: 100%; }
+
+
+
+.off-canvas-wrap {
+    height:100%;   
+}
+
+
 h1.sign_in {
 	color: rgba(52, 152, 219, 1.0);
 	text-align: center;
@@ -47,9 +62,6 @@ div.actions .button:hover {
 	background-color: rgba(52, 152, 219, 1.0);
 }
 
-.off-canvas-wrap,.inner-wrap {
-    height: auto;   
-}
 
 aside ul, li {
 	margin-top: 2em;
@@ -78,7 +90,7 @@ div.player-profile {
 
 .home {
 	width: 100%;
-	height: 45em;
+	/*height: 45em;*/
 }
 .home-page-up .button {
 	width: 100%;
@@ -135,6 +147,10 @@ div.tourny-actions .button:hover {
 	.field {
 		margin-top: -1em;
 	} 
+
+	.home-page-up {
+		margin-top: 5em;
+	}
 } 
 
 @media only screen and (max-width: 50em) {

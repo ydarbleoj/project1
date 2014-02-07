@@ -27,7 +27,7 @@ gem 'annotate'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-
+gem 'pry'
 
 group :development do
   gem 'quiet_assets', '~> 1.0.2' 

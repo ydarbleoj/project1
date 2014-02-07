@@ -6,13 +6,15 @@ class TournamentsController < ApplicationController
     @tournaments = Tournament.all
   end
 
-  # GET /tournaments/1
-  def show 
-    @tournaments = Tournament.all
-  end 
-
   def new
     @tournament = Tournament.new
+  end 
+
+  # GET /tournaments/1
+  def show 
+    id = params.require(:id)
+    @tournament = Tournament.find(id)
+    @players = @tournament.scores
   end 
 
   def create
@@ -24,8 +26,11 @@ class TournamentsController < ApplicationController
     end 
   end
 
-  
-
+# need to be able to display a tournament 
+#  with and link to it and the players 
+# id = params.require(:id)
+# @torunament = tournament.find(id)
+# @player = @tournament.player
 
   
   private
@@ -36,6 +41,7 @@ class TournamentsController < ApplicationController
 end
 
 
+ # @tournament.scores.each {|x| puts "#{x.player_id}"}
 
-
+ # @tournament.scores.each {|x| puts "#{x.player_id} - #{x.gross_score}"}
 

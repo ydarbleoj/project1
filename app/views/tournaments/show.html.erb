@@ -1,44 +1,38 @@
 <div class="row tournament-display">
 	<div class="small-10 small-centered medium-10 medium-centered large-10 large-centered columns">
 		<p class="notice"><%= notice %></p>
-		<h1><%#= tournament.name %></h1>
-		<table>
-		<thead>
-			<tr>
+		<h1><%= @tournament.name %></h1>
+	<table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+        <th>Player</th>
+        <th>Hcap</th>
+        <th>Rnd 1</th>
+        <th>Rnd 2</th>
+        <th>Rnd 3</th>
+        <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+        <% @tournament.players.each do |t| %>
+          <tr>
+          	<td><%= 1 %></td>
+            <td><%= link_to t.name, player_path %></td>
+            <td><%= t.handicap %></td>
+       
+            
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-				<th>Rank</th>
-				<th>Score</th>
-				<th>Player</th>
-				<th>Hcap</th>
-				<th>Rnd 1 - Gross</th>
-				<th>Rnd 1 - Net  </th>
-				<th>Rnd 2 - Gross</th>
-				<th>Rnd 2 - Net  </th>
-				<th>Rnd 3 - Gross</th>
-				<th>Rnd 3 - Net  </th>
-				<th>Total - Gross</th>
-				<th>Total - Net  </th>
-			</tr>
-		</thead>
-		<tbody>
-
-			<tr>
-				<td><%= 1 %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-				<td><%= %></td>
-
-			</tr>
-			<%# end %>
-		</tbody>
-	</table>
 	</div>
 </div>
+
+
+
+
+
+
+<!-- @tournament.scores.each {|x| puts "#{x.player_id} - #{x.gross_score}"} -->

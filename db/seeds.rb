@@ -39,8 +39,6 @@ players << Player.create(name: "Chris Lugar", handicap: "14", email: "chris@emai
                         password_confirmation: "foobar11", city: "Portland", state: "Oregon")
 players << Player.create(name: "David Chin", handicap: "11", email: "david@email.com", password: "foobar12", 
                         password_confirmation: "foobar12", city: "Portland", state: "Oregon")
-players << Player.create(name: "Greg Ryerson", handicap: "18", email: "greg@email.com", password: "foobar13", 
-                        password_confirmation: "foobar13", city: "Portland", state: "Oregon")
 players << Player.create(name: "Jon Laufenberg", handicap: "14", email: "jon@email.com", password: "foobar14", 
                         password_confirmation: "foobar14", city: "Portland", state: "Oregon")
 
@@ -59,7 +57,7 @@ scores << Score.create(player_id: 10, tournament_id: 1, gross_score: 90)
 scores << Score.create(player_id: 11, tournament_id: 1, gross_score: 90)
 scores << Score.create(player_id: 12, tournament_id: 1, gross_score: 90)
 scores << Score.create(player_id: 13, tournament_id: 1, gross_score: 90)
-scores << Score.create(player_id: 14, tournament_id: 1, gross_score: 90)
+
 
 tournaments[0].players << players[0]
 tournaments[0].players << players[1]
@@ -74,7 +72,7 @@ tournaments[0].players << players[9]
 tournaments[0].players << players[10]
 tournaments[0].players << players[11]
 tournaments[0].players << players[12]
-tournaments[0].players << players[13]
+
 
 
 

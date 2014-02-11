@@ -29,9 +29,15 @@ gem 'turbolinks'
 
 gem 'pry'
 
-group :development do
+group :development, :test do 
+  gem 'dotenv-rails'
+  gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'quiet_assets', '~> 1.0.2' 
   gem 'better_errors'
+  gem 'guard-rspec' 
+  gem 'launchy'
+  gem 'database_cleaner'
+  gem 'guard-livereload'
   gem 'binding_of_caller'
   gem 'meta_request'
 end 
